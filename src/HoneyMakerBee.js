@@ -2,14 +2,14 @@ var HoneyMakerBee = function() {
   Bee.call(this);
   this.age = 10;
   this.job = 'make honey';
-  this.color = 'yellow';  //might not need this line of code, Bee.color is already 'yellow'
-  // this.food; inherited from Grub
-  // this.eat; inherited from Grub
+
   this.honeyPot = 0;
-  this.makeHoney = function(){};
   this.giveHoney;
 };
 
+HoneyMakerBee.prototype.makeHoney = function(honeyPot){
+  return honeyPot += 1;
+};
 HoneyMakerBee.prototype = Object.create(Bee.prototype);
 HoneyMakerBee.prototype.constructor = HoneyMakerBee;
 

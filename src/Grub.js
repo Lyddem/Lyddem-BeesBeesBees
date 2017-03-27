@@ -1,12 +1,12 @@
 var Grub = function() {
-  this = Object.create(Grub.prototype);
+
+  // this = Object.create(Grub.prototype);
   this.age = 0;
   this.color = 'pink';
-  this.food = 'jelly';
-  this.eat = function(){};
-  return this;
+  this.food = 'jelly'; //could move all these down to be in the prototype
 };
 
+  Grub.prototype.eat = function(){}; console.log(this)
 // Grub.prototype = Object.create();
 // Grub.
 
