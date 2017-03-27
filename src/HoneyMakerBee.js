@@ -4,12 +4,19 @@ var HoneyMakerBee = function() {
   this.job = 'make honey';
 
   this.honeyPot = 0;
-  this.giveHoney;
+  this.makeHoney = function(){
+    this.honeyPot ++;
+  };
+  this.giveHoney = function(){
+    this.honeyPot--;
+  }
+
 };
 
-HoneyMakerBee.prototype.makeHoney = function(honeyPot){
-  return honeyPot += 1;
-};
+// HoneyMakerBee.prototype.makeHoney = function(){
+//      this.honeyPot++;
+// };
+
 HoneyMakerBee.prototype = Object.create(Bee.prototype);
 HoneyMakerBee.prototype.constructor = HoneyMakerBee;
 
